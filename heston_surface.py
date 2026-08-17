@@ -115,8 +115,8 @@ if __name__ == "__main__":
     random.seed(7)
     spot, rate = 100.0, 0.02
     true = Heston(1.8, 0.045, 0.55, -0.72, 0.035)
-    quotes = market_surface(true, spot, [80, 90, 100, 110, 120], [0.25, 0.75, 1.5], rate, noise=0.004)
+    quotes = market_surface(true, spot, [80, 90, 100, 110, 120], [0.25, 0.75, 1.5], rate, noise=0.006)
     fitted = calibrate(quotes[:-3], spot, rate)
     print("fitted:", fitted)
-    print(f"held-out RMSE: {weighted_rmse(fitted, quotes[-3:], spot, rate) * 100:.2f} vol points")
+    print(f"held-out RMSE: {weighted_rmse(fitted, quotes[-3:], spot, rate) * 100:.1f} vol points")
     print("ATM 1Y sensitivity:", sensitivity(fitted, (100, 1.0, 0.0), spot, rate))

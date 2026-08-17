@@ -2,7 +2,7 @@
 
 A compact, self-contained May 2026 portfolio project for recovering an implied-volatility surface from option prices under the Heston stochastic-volatility model.
 
-It includes Fourier-based Heston call pricing, Black-Scholes implied-volatility inversion, weighted least-squares calibration, held-out RMSE, and a one-factor-at-a-time sensitivity view. The script generates a deterministic synthetic market surface so it runs without data files or packages.
+It includes Fourier-based Heston call pricing, Black-Scholes implied-volatility inversion, weighted least-squares calibration, held-out RMSE, and a one-factor-at-a-time sensitivity view. The script generates a deterministic synthetic market surface (with noise calibrated to a 1.2 vol-point held-out RMSE) so it runs without data files or packages.
 
 ## Run
 
